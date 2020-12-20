@@ -5,12 +5,6 @@ let about = '\n<ul><li>Skilled Backend Developer with the ability to learn and i
 
 
 let projects = `
-<style>
-table, th, td {
-  border: 1px solid red;
-  border-collapse: collapse;
-}
-</style>
 <br>
 <table style="width:80%">
   <tr>
@@ -47,16 +41,42 @@ table, th, td {
     <td>An Open-Source Project, GitHub Dynamic Quote Generator simply allows you to add an image link in the markdown (README.md) and it will view you a dynamic quote for every user visiting your GitHub account.</td>
   </tr>
 </table>
-<br>`;
+<br><br>
+`;
 
 let contact = `
-
-│        Medium:  https://dev.to/imshravan                                           │
-│       Twitter:  https://twitter.com/imshravankb                                    │
-│        GitHub:  https://github.com/shravan20                                       │
-│      LinkedIn:  https://linkedin.com/in/shravankb                                  │
-│           Web:  https://ohmyscript.com 											 │
-│          Mail:  shravan@ohmyscript.com 											 │
+<br/>You can connect to me through the following:<br/>
+<style>
+table, th, td {
+  border: 1px solid white;
+  border-collapse: collapse;
+}
+</style>
+<br>
+<table style="width:80%">
+<tr>
+	<td><br>Medium:<br></td><td><br>https://medium.com/@shravan20<br></td>
+</tr>
+<tr>
+	<td><br>Dev Community:<br></td><td><br> https://dev.to/imshravan<br></td>
+</tr>
+<tr>
+	<td><br>Twitter:<br></td><td><br>  https://twitter.com/imshravankb<br></td>
+</tr>
+<tr>
+	<td><br>GitHub:<br></td><td><br>  https://github.com/shravan20<br></td>
+</tr>
+<tr>
+	<td><br>LinkedIn:<br></td><td><br>  https://linkedin.com/in/shravankb<br></td>
+</tr>
+<tr>
+	<td><br>Web:<br></td><td><br>  https://ohmyscript.com<br></td> 								  
+</tr>
+<tr>
+	<td><br>Mail: <br></td><td><br> shravan@ohmyscript.com<br></td> 								  
+</tr>
+<table>
+<br>
 `
 
 
@@ -64,11 +84,11 @@ let contact = `
 
 
 $('body').terminal({
-	iam: function (name) {
-		this.echo('Hello, ' + name + '. Welcome to GeeksForGeeks');
+	whereami: function (name) {
+		this.echo('Hello, Welcome to OhMyScript CLI Portfolio');
 	},
 	contact: function () {
-		this.echo(contact);
+		this.echo(contact, {raw:true});
 	},
 	projects: function () {
 		this.echo( projects, {raw:true});
@@ -78,6 +98,7 @@ $('body').terminal({
 	},
 	help: function () {
 		this.echo('\n These are commands available: \n');
+		this.echo('whereami - locates current terminal');
 		this.echo('aboutme - briefs about the author of OhMyScript');
 		this.echo('projects - briefs about the projects worked on');
 		this.echo('contact - provides my contact details');
@@ -85,7 +106,7 @@ $('body').terminal({
 		this.echo('\n');		
 	},
 }, {
-	greetings: `\nHi there, to view all the commands in the OhMyScript CLI, type command help`
+	greetings: `\nHi there, to view all the commands in the &#10026; OhMyScript CLI &#10026; , type command help`
 },
 {
     autocompleteMenu: true,
