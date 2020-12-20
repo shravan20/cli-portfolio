@@ -1,4 +1,4 @@
-let about = '\n<ul><li>Skilled Backend Developer with the ability to learn and implement new technologies quickly.</li>' + 
+let about = '<br> I am Shravan Kumar B, a crazy technology enthusiast. \n<ul><li>Skilled Backend Developer with the ability to learn and implement new technologies quickly.</li>' + 
 '\n<li>Worked on IoT technology and Web Technologies( MEAN / MERN )</li>' +
 '\n<li>Currently working and exploring React with Redux Architecture and Express Framework, along with TypeScript.</li>' +
 '</ul>';
