@@ -84,7 +84,7 @@ table, th, td {
 
 
 $('body').terminal({
-	whereami: function (name) {
+	whereami: function () {
 		this.echo('Hello, Welcome to OhMyScript CLI Portfolio');
 	},
 	contact: function () {
