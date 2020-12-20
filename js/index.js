@@ -1,111 +1,31 @@
-var Typer = {
-	text: null,
-	accessCountimer:null,
-	index:0, 
-	speed:2,
-	file:"", 
-	accessCount:0,
-	deniedCount:0, 
-	init: function(){
-		accessCountimer=setInterval(function(){Typer.updLstChr();},500); 
-		$.get(Typer.file,function(data){
-			Typer.text=data;
-			Typer.text = Typer.text.slice(0, Typer.text.length-1);
-		});
+$('body').terminal({
+	iam: function (name) {
+		this.echo('Hello, ' + name +
+			'. Welcome to GeeksForGeeks');
 	},
- 
-	content:function(){
-		return $("#console").html();
+	founder: function () {
+		this.echo('Sandeep Jain');
 	},
- 
-	write:function(str){
-		$("#console").append(str);
-		return false;
+	aboutme: function () {
+		this.echo('\n<ul><li>Skilled Backend Developer with the ability to learn and implement new technologies quickly.</li>' + 
+		'\n\n<li>Worked on IoT technology and Web Technologies( MEAN / MERN )</li>' +
+		'\n<li>Currently working and exploring React with Redux Architecture and Express Framework, along with TypeScript.</li>' +
+		'</ul>',
+		{raw:true}		
+		);
 	},
- 
-	addText:function(key){
-		
-		if(key.keyCode == 18){
-			Typer.accessCount++; 
-			
-			if(Typer.accessCount >= 3){
-				Typer.makeAccess(); 
-			}
-		}
-		
-    		else if(key.keyCode == 20){
-			Typer.deniedCount++; 
-			
-			if(Typer.deniedCount >= 3){
-				Typer.makeDenied(); 
-			}
-		}
-		
-    		else if(key.keyCode == 27){ 
-			Typer.hidepop(); 
-		}
-		
-    		else if(Typer.text){ 
-			var cont=Typer.content(); 
-			if(cont.substring(cont.length-1,cont.length) == "|") 
-				$("#console").html($("#console").html().substring(0,cont.length-1)); 
-			if(key.keyCode != 8){ 
-				Typer.index+=Typer.speed;	
-			}
-      		else {
-			if(Typer.index > 0) 
-				Typer.index-=Typer.speed;
-			}
-			var text=Typer.text.substring(0,Typer.index)
-			var rtn= new RegExp("\n", "g"); 
-	
-			$("#console").html(text.replace(rtn,"<br/>"));
-			window.scrollBy(0,50); 
-		}
-		
-		if ( key.preventDefault && key.keyCode != 122 ) { 
-			key.preventDefault()
-		};  
-		
-		if(key.keyCode != 122){ // otherway prevent keys default behavior
-			key.returnValue = false;
-		}
+	more: function () {
+		this.echo('\n These are commands available: \n');
+		this.echo('aboutme - briefs about the author of OhMyScript');
+		this.echo('projects - briefs about the projects worked on');
+		this.echo('contact - provides you contact details');
+		this.echo('blog - click <a href="https://ohmyscript.com/" target="__blank">ohmyscript</a>',{raw:true});
+		this.echo('\n');		
 	},
- 
-	updLstChr:function(){ 
-		var cont=this.content(); 
-		
-		if(cont.substring(cont.length-1,cont.length)=="|") 
-			$("#console").html($("#console").html().substring(0,cont.length-1)); 
-		
-		else
-			this.write("|"); // else write it
-	}
-}
- 
-function replaceUrls(text) {
-	var http = text.indexOf("http://");
-	var space = text.indexOf(".me ", http);
-	
-	if (space != -1) { 
-		var url = text.slice(http, space-1);
-		return text.replace(url, "<a href=\""  + url + "\">" + url + "</a>");
-	} 
-	
-	else {
-		return text
-	}
-}
-
-Typer.speed=3;
-Typer.file="../content/shravan.txt";
-Typer.init();
- 
-var timer = setInterval("t();", 30);
-function t() {
-	Typer.addText({"keyCode": 123748});
-	
-	if (Typer.index > Typer.text.length) {
-		clearInterval(timer);
-	}
-}
+}, {
+	greetings: `\nHi there, to view all the commands in the OhMyScript CLI, type command help`
+},
+{
+    autocompleteMenu: true,
+    completion: ['foo', 'bar', 'baz']
+});
