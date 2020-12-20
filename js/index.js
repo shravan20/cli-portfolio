@@ -61,25 +61,25 @@ table, th, td {
 <br>
 <table style="width:80%">
 <tr>
-	<td><br>Medium:<br></td><td><br>https://medium.com/@shravan20<br></td>
+	<td><br> &#128215; Medium:<br></td><td><br><a href="https://medium.com/@shravan20" target="__blank">https://medium.com/@shravan20</a><br></td>
 </tr>
 <tr>
-	<td><br>Dev Community:<br></td><td><br> https://dev.to/imshravan<br></td>
+	<td><br> &#9997;&#127996; Dev Community:<br></td><td><br> <a href="https://dev.to/imshravan" target="__blank">https://dev.to/imshravan</a><br></td>
 </tr>
 <tr>
-	<td><br>Twitter:<br></td><td><br>  https://twitter.com/imshravankb<br></td>
+	<td><br> &#128242; Twitter:<br></td><td><br>  <a href="https://twitter.com/imshravankb" target="__blank">https://twitter.com/imshravankb</a><br></td>
 </tr>
 <tr>
-	<td><br>GitHub:<br></td><td><br>  https://github.com/shravan20<br></td>
+	<td><br> 👩‍💻 GitHub:<br></td><td><br>  <a href="https://github.com/shravan20" target="__blank">https://github.com/shravan20</a><br></td>
 </tr>
 <tr>
-	<td><br>LinkedIn:<br></td><td><br>  https://linkedin.com/in/shravankb<br></td>
+	<td><br> &#128075; LinkedIn:<br></td><td><br>  <a href="https://linkedin.com/in/shravankb" target="__blank">https://linkedin.com/in/shravankb</a><br></td>
 </tr>
 <tr>
-	<td><br>Web:<br></td><td><br>  https://ohmyscript.com<br></td> 								  
+	<td><br> &#128221; Webfolio:<br></td><td><br>  <a href="https://ohmyscript.com" target="__blank">https://ohmyscript.com</a><br></td> 								  
 </tr>
 <tr>
-	<td><br>Mail: <br></td><td><br> shravan@ohmyscript.com<br></td> 								  
+	<td><br> &#x1F4E7; Mail: <br></td><td><br> <a href="mailto:shravan@ohmyscript.com" target="__blank">shravan@ohmyscript.com</a><br></td> 								  
 </tr>
 <table>
 <br>
