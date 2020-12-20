@@ -6,7 +6,13 @@ let about = '<br> I am Shravan Kumar B, a crazy technology enthusiast. \n<ul><li
 
 let projects = `
 <br>
-<table style="width:80%">
+<style>
+table, th, td {
+  border: 1px solid red;
+  border-collapse: collapse;
+}
+</style>
+<table style="width:100%">
   <tr>
     <th>Project Name</th>
     <th>Description</th> 
