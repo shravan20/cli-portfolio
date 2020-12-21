@@ -92,6 +92,10 @@ table, th, td {
 $('body').terminal({
 	whereami: function () {
 		this.echo('Hello, Welcome to OhMyScript CLI Portfolio');
+  },
+  blog: function () {
+      this.echo('<h2>Redirecting to blog</h2>', {raw:true});
+      $(location).attr('href','https://ohmyscript.com');      
 	},
 	contact: function () {
 		this.echo(contact, {raw:true});
